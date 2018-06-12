@@ -1,6 +1,20 @@
-#README for ABioNLP tool - A Biological Natural Language Processing Tool for Systems Biology, Translational science and Medicine. 
+# README for ABioNLP tool
 
-This tool is part of the paper "Mining Scientific Articles for Inter-Relationships and Visualisation: Natural Language Processing for Systems Biology Modeling" by Nidheesh Melethadathil, Priya Chellaiah, Jaap Heringa, Bipin Nair and Shyam Diwakar. (manuscript submitted)
+This tool is part of the paper "Mining Scientific Articles for Inter-Relationships and Visualisation: Natural Language Processing for Systems Biology Modeling" by Nidheesh Melethadathil, Priya Chellaiah, Jaap Heringa, Bipin Nair and Shyam Diwakar.
+
+------
+This software is covered by the Simplified BSD license. 
+Copyright (C) 2018 Nidheesh Melethadathil, Bipin Nair, Shyam Diwakar
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-------
+
 
 Code contributors: Nidheesh Melethdathil and Shyam Diwakar
 Computational Neuroscience Lab, Amrita School of Biotechnology
@@ -10,7 +24,13 @@ www.amrita.edu/compneuro
 last updated: 27 Feb 2018 
 ---------------
 
-#Installation
+# Introduction
+--------------------------------------------------------------------------------------------------------------
+Methods to improve the search engines have been thrust research area from the time internet has been in place. Searching science related documents from open access databases like PubMed is time confusing and inefficient to get the most relevant articles related to search word. A number of search engines enabled with document clustering features have been developed in last few decades. Even though clustering techniques used in those tools produce valid clusters with sufficient number of documents, an Auto clustering technique which optimizes the parameters for the clustering algorithm internally has not been implemented in any of them which is an additional feature implemented in this framework. A cluster validation method by mapping the cluster labels with an authenticated medical library by National Institute of Health(NIH) along with a sophisticated graphical visualization makes this framework as unique.
+This system is implemented in five different phases:  Retrieval of the articles, document clustering, validation of clusters and scoring, storing the resulted clusters in the graph database and visualization of the results.
+--------------------------------------------------------------------------------------------------------------
+
+# Installation
 
 This framework uses different open source application and interfaces for article retrieval, document clustering and visualization. This is web based or runs on Tomcat with two other third party APIs for cluster label validation and visualization. 
 Installation requires following steps to be executed.
@@ -24,15 +44,15 @@ Installation requires following steps to be executed.
 	d.	On the project view (default left side of the screen), go to services, right click on Servers and then "Add Server"
 	e.	Select Apache Tomcat, enter username and password and config the rest and finish.
 
-3.	Download and configure MySQL database. Preferably install WAMP server from following link.   https://sourceforge.net/projects/wampserver/ in the server and import the tables from BioNLP.sql file available in the Db_Sql folder).
+3.	Download and configure MySQL database. Preferably install WAMP server from following link.   https://sourceforge.net/projects/wampserver/ in the server and import the tables from BioNLP.sql file available in the database folder).
 
 4.	Download and configure Neo4j(https://neo4j.com/download/), the Graph database in the root folder. 
 
 5.	Download and copy MetaMap, the UMLS Metathesaurus files available from https://metamap.nlm.nih.gov/JavaApi.shtml to root folder. 
 
-6.	Setup the BioNLP Web application by building the project in NetBeans.
+6.	Setup the BioNLP Web application by building the project (ASciDNLP.zip) in the NetBeans.
 --------------------------------------------------------------------------------------------------------------
-#Operating Instructions
+# Operating Instructions
 
 Server Side
 1.	Start three services of MetaMap (by executing the corresponding .bat files available in \public_mm_win32_main_2012\public_mm\bin folder)
@@ -57,4 +77,4 @@ Browser Side
 
 6.	Right click on cluster label to perform re-clustering to group the articles which are note presently grouped in any group.
 --------------------------------------------------------------------------------------------------------------
-#Contact: nidheesh@am.amrita.edu, shyam@amrita.edu
+# Contact	(1) shyam@amrita.edu (2) nidheesh@am.amrita.edu
